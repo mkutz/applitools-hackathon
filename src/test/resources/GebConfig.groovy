@@ -1,11 +1,11 @@
-import io.github.bonigarcia.wdm.WebDriverManager
-import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.chrome.ChromeOptions
+import org.testcontainers.containers.BrowserWebDriverContainer
 
 baseUrl = 'https://demo.applitools.com/hackathon.html'
 
-autoClearWebStorage = true
-
 driver = {
-    WebDriverManager.chromedriver().setup()
-    return new ChromeDriver()
+    BrowserWebDriverContainer container = new BrowserWebDriverContainer()
+            .withCapabilities(new ChromeOptions())
+    container.start()
+    return container.webDriver
 }
