@@ -7,6 +7,11 @@ repositories {
     mavenLocal()
 }
 
+task testWithTestcontainers(type: Test) {
+    outputs.upToDateWhen { false }
+    systemProperty "geb.env", "chromeTestcontainers"
+}
+
 dependencies {
     testImplementation 'org.gebish:geb-spock:3.2'
     testImplementation 'org.spockframework:spock-core:1.3-groovy-2.5'
