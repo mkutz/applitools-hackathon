@@ -8,5 +8,8 @@ class MainPage extends Page {
 
     static content = {
         transactionsTable { $('#transactionsTable').module(TransactionsTableModule) }
+        compareExpensesLink { $('#showExpensesChart') }
+        expensesChart(required: false) { $('#canvas') }
+        addDataForNextYearButton(required: false) { $('#addDataset') }
     }
 }
