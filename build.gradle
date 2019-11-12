@@ -7,9 +7,12 @@ repositories {
     mavenLocal()
 }
 
-task testWithTestcontainers(type: Test) {
+test {
     outputs.upToDateWhen { false }
-    systemProperty "geb.env", "chromeTestcontainers"
+    doFirst {
+        systemProperty "geb.env", System.getProperty("testcontainers") ? "chromeTestcontainers" : ""
+        systemProperty "geb.build.baseUrl", "https://demo.applitools.com/hackathon${System.getProperty("v2") ? "V2": ""}.html"
+    }
 }
 
 dependencies {

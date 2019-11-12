@@ -6,8 +6,6 @@ import geb.module.TextInput
 
 class LoginPage extends Page {
 
-    static url = '/hackathon.html'
-
     static at = { $('.auth-header') }
 
     static content = {
