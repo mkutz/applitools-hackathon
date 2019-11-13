@@ -16,7 +16,9 @@ test {
 }
 
 dependencies {
+    testImplementation 'org.codehaus.groovy:groovy-all:2.5.8@pom'
     testImplementation 'org.gebish:geb-spock:3.2'
+    testImplementation 'de.retest:recheck-web:1.6.0'
     testImplementation 'org.spockframework:spock-core:1.3-groovy-2.5'
     testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
     testImplementation 'io.github.bonigarcia:webdrivermanager:3.7.1'
