@@ -5,15 +5,10 @@ import de.retest.recheck.RecheckImpl
 
 class CanvasChartSpec extends LoggedInSpec {
 
-    Recheck re = new RecheckImpl().tap {
-        startTest(this.class.simpleName)
-    }
+    Recheck re = new RecheckImpl()
 
     def setup() {
         re.startTest("${specificationContext.currentSpec.name}.${specificationContext.currentFeature.name}")
-    }
-
-    def cleanup() {
     }
 
     def "chart is displayed"() {
