@@ -11,7 +11,7 @@ class MainPage extends Page {
         compareExpensesLink { $('#showExpensesChart') }
         expensesChart(required: false) { $('#canvas') }
         addDataForNextYearButton(required: false) { $('#addDataset') }
-        ad1(required: false) { $('#flashSale') }
-        ad2(required: false) { $('#flashSale2') }
+        ad1(required: false) { $('#flashSale img') }
+        ad2(required: false) { $('#flashSale2 img') }
     }
 }
