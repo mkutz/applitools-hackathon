@@ -1,4 +1,5 @@
 = Applitools Hackathon
+:includedir: .github/workflows/
 
 == Used Technology
 
@@ -9,11 +10,11 @@ This application uses https://gebish.org[Geb] as Selenium framework and http://s
 [source,shell script,indent=0]
 .Run all tests against the v1 application
 ----
-include::.github/workflows/run-tests.yml[tags=run-tests-v1]
+include::{includedir}run-tests.yml[tags=run-tests-v1]
 ----
 
 [source,shell script,indent=0]
 .Run all tests against the v2 application
 ----
-include::.github/workflows/run-tests.yml[tags=run-tests-v2]
+include::{includedir}run-tests.yml[tags=run-tests-v2]
 ----
