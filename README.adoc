@@ -10,11 +10,11 @@ This application uses https://gebish.org[Geb] as Selenium framework and http://s
 [source,shell script,indent=0]
 .Run all tests against the v1 application
 ----
-include::{includedir}run-tests.yml[tags=run-tests-v1]
+./gradlew test -Dtestcontainers=true
 ----
 
 [source,shell script,indent=0]
 .Run all tests against the v2 application
 ----
-include::{includedir}run-tests.yml[tags=run-tests-v2]
+./gradlew test -Dtestcontainers=true -Dv2=true
 ----

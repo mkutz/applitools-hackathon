@@ -5,10 +5,10 @@
 			<identifyingAttributes>
 				<attributes>
 					<attribute key="absolute-outline" xsi:type="outlineAttribute">
-						<x>292</x>
-						<y>116</y>
-						<height>351</height>
-						<width>703</width>
+						<x>24</x>
+						<y>108</y>
+						<height>476</height>
+						<width>953</width>
 					</attribute>
 					<attribute key="class" xsi:type="stringAttribute">chartjs-render-monitor</attribute>
 					<attribute key="id" xsi:type="stringAttribute">canvas</attribute>
@@ -39,7 +39,7 @@
 					</entry>
 					<entry>
 						<key>style</key>
-						<value xsi:type="xsd:string">display: block; width: 703px; height: 351px;</value>
+						<value xsi:type="xsd:string">display: block; width: 953px; height: 476px;</value>
 					</entry>
 				</attributes>
 			</attributes>
