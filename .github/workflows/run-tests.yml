@@ -11,6 +11,12 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run tests
-      run: ./gradlew test -Dtestcontainers=true
+      run:
+        # tag::run-tests-v1[]
+        ./gradlew test -Dtestcontainers=true
+        # end::run-tests-v1[]
     - name: Run test v2
-      run: ./gradlew test -Dtestcontainers=true -Dv2=true
+      run:
+        # tag::run-tests-v2[]
+        ./gradlew test -Dtestcontainers=true -Dv2=true
+        # end::run-tests-v2[]

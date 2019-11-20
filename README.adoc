@@ -1,0 +1,19 @@
+= Applitools Hackathon
+
+== Used Technology
+
+This application uses https://gebish.org[Geb] as Selenium framework and http://spockframework.org[Spock] as test framework combined with https://retest.de/recheck-web-open-source/[Recheck Web] for visual testing.
+
+== How To Run
+
+[source,shell script,indent=0]
+.Run all tests against the v1 application
+----
+include::.github/workflows/run-tests.yml[tags=run-tests-v1]
+----
+
+[source,shell script,indent=0]
+.Run all tests against the v2 application
+----
+include::.github/workflows/run-tests.yml[tags=run-tests-v2]
+----
