@@ -12,9 +12,13 @@ class TraditionalTests extends GebSpec {
     static final String someUsername = "username"
     static final String somePassword = "p4ssw0rd"
 
+    String testName
+
     def setup() {
-        this.browser.driver.manage().window().setPosition(new Point(0, 0))
-        this.browser.driver.manage().window().setSize(new Dimension(1024, 768))
+        testName = "${specificationContext.currentSpec.name}.${specificationContext.currentFeature.name}"
+
+        driver.manage().window().setPosition(new Point(0, 0))
+        driver.manage().window().setSize(new Dimension(1024, 768))
     }
 
     /*
@@ -114,7 +118,7 @@ class TraditionalTests extends GebSpec {
     def "add data set for next year"() {
         given:
         Recheck re = new RecheckImpl().tap {
-            startTest("${specificationContext.currentSpec.name}.${specificationContext.currentFeature.name}")
+            startTest(testName)
         }
 
         and:
