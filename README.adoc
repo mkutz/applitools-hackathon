@@ -9,7 +9,7 @@ This application uses https://gebish.org[Geb] as Selenium framework and http://s
 
 1. Set a valid Applitools API key as environment variable:
 
-    export APPLITOOLS_API_KEY
+    export APPLITOOLS_API_KEY=<YOUR_API_KEY>
 
 2. Run the test either on v1:
 
