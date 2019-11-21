@@ -16,7 +16,7 @@ class TraditionalTests extends GebSpec {
         testName = "${specificationContext.currentSpec.name}.${specificationContext.currentIteration.name}"
 
         driver.manage().window().setPosition(new Point(0, 0))
-        driver.manage().window().setSize(new Dimension(1024, 768))
+        driver.manage().window().setSize(new Dimension(1920, 1080))
     }
 
     /*
