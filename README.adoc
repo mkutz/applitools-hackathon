@@ -7,14 +7,14 @@ This application uses https://gebish.org[Geb] as Selenium framework and http://s
 
 == How To Run
 
-[source,shell script,indent=0]
-.Run all tests against the v1 application
-----
-./gradlew test -Dtestcontainers=true
-----
+1. Set a valid Applitools API key as environment variable:
 
-[source,shell script,indent=0]
-.Run all tests against the v2 application
-----
-./gradlew test -Dtestcontainers=true -Dv2=true
-----
+    export APPLITOOLS_API_KEY
+
+2. Run the test either on v1:
+
+    ./gradlew test -Dtestcontainers=true
+
+3. Or on v2:
+
+    ./gradlew test -Dtestcontainers=true -Dv2=true
