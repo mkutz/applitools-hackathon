@@ -1,7 +1,5 @@
 package io.github.mkutz.applitoolshackathon
 
-import de.retest.recheck.Recheck
-import de.retest.recheck.RecheckImpl
 import geb.spock.GebSpec
 import org.openqa.selenium.Dimension
 import org.openqa.selenium.Point
@@ -93,11 +91,6 @@ class TraditionalTests extends GebSpec {
 
     def "chart is displayed"() {
         given:
-        Recheck re = new RecheckImpl().tap {
-            startTest("${specificationContext.currentSpec.name}.${specificationContext.currentFeature.name}")
-        }
-
-        and:
         to(LoginPage).login(someUsername, somePassword)
         MainPage mainPage = at(MainPage)
 
@@ -110,31 +103,12 @@ class TraditionalTests extends GebSpec {
         then:
         mainPage.expensesChart.displayed
 
-        and:
-        re.check(mainPage.expensesChart.singleElement(), "chart")
-        re.capTest()
+        // This does not really check the content of the chart since there is no way to validate a canvas via Selenium
+        // only.
     }
 
     def "add data set for next year"() {
-        given:
-        Recheck re = new RecheckImpl().tap {
-            startTest(testName)
-        }
-
-        and:
-        to(LoginPage).login(someUsername, somePassword)
-        MainPage mainPage = at(MainPage)
-        mainPage.compareExpensesLink.click()
-
-        when:
-        mainPage.addDataForNextYearButton.click()
-
-        and:
-        sleep(2000)
-
-        then:
-        re.check(mainPage.expensesChart.singleElement(), "chart with next year")
-        re.capTest()
+        // Here we need to check a change in the canvas. This is not possible using Selenium only.
     }
 
     /*
