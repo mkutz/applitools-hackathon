@@ -13,7 +13,7 @@ class TraditionalTests extends GebSpec {
     String testName
 
     def setup() {
-        testName = "${specificationContext.currentSpec.name}.${specificationContext.currentFeature.name}"
+        testName = "${specificationContext.currentSpec.name}.${specificationContext.currentIteration.name}"
 
         driver.manage().window().setPosition(new Point(0, 0))
         driver.manage().window().setSize(new Dimension(1024, 768))
