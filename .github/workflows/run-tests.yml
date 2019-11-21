@@ -15,6 +15,3 @@ jobs:
         APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
       run:
         ./gradlew test -Dtestcontainers=true
-    - name: Run test v2
-      run:
-        ./gradlew test -Dtestcontainers=true -Dv2=true
