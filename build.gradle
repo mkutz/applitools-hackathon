@@ -10,8 +10,8 @@ repositories {
 test {
     outputs.upToDateWhen { false }
     doFirst {
-        systemProperty "geb.env", System.getProperty("testcontainers") ? "chromeTestcontainers" : ""
-        systemProperty "geb.build.baseUrl", "https://demo.applitools.com/hackathon${System.getProperty("v2") ? "V2": ""}.html"
+        systemProperty "geb.env", project.hasProperty("testcontainers") ? "chromeTestcontainers" : ""
+        systemProperty "geb.build.baseUrl", "https://demo.applitools.com/hackathon${project.hasProperty("v2") ? "V2": ""}.html"
         systemProperty "applitools.apikey", System.getenv("APPLITOOLS_API_KEY")
     }
 }
