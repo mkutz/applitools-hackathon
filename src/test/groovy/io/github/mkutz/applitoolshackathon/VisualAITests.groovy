@@ -108,7 +108,7 @@ class VisualAITests extends GebSpec {
         }
 
         and:
-        eyes.checkWindow()
+        eyes.checkElement(mainPage.transactionsTable.singleElement())
         eyes.close()
     }
 
