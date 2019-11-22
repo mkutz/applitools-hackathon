@@ -40,7 +40,8 @@ class TraditionalTests extends GebSpec {
      */
 
     @Unroll
-    def "login with username \"#username\" & password \"#password\" fails"(String username, String password) {
+    def "login with username \"#username\" & password \"#password\" fails"(
+            String username, String password, String expectedErrorMessage) {
         given:
         LoginPage loginPage = browser.to(LoginPage)
 
@@ -48,13 +49,16 @@ class TraditionalTests extends GebSpec {
         loginPage.login(username, password)
 
         then:
-        at(LoginPage).alerts
+        at(LoginPage)
+
+        and:
+        loginPage.alerts.collect { it.text() } == [ expectedErrorMessage ]
 
         where:
-        username     | password
-        someUsername | ""
-        ""           | somePassword
-        ""           | ""
+        username     | password     || expectedErrorMessage
+        someUsername | ""           || "Password must be present"
+        ""           | somePassword || "Username must be present"
+        ""           | ""           || "Both Username and Password must be present"
     }
 
     def "login with username & password succeeds"() {

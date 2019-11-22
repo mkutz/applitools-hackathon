@@ -12,7 +12,7 @@ class LoginPage extends Page {
         usernameInput { $('#username').module(TextInput) }
         passwordInput { $('#password').module(PasswordInput) }
         submitButton { $('#log-in') }
-        alerts { $('.alert').collect { it.text() } }
+        alerts { $('.alert').findAll { it.text().trim() } }
     }
 
     void login(String username, String password) {
