@@ -12,7 +12,7 @@ class LoginPage extends Page {
         usernameInput { $('#username').module(TextInput) }
         passwordInput { $('#password').module(PasswordInput) }
         submitButton { $('#log-in') }
-        alerts { $('.alert').findAll { it.text().trim() } }
+        alert(required: false) { $('.alert', text: ~/.+/) }
     }
 
     @SuppressWarnings("GrMethodMayBeStatic")

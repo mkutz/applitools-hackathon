@@ -52,7 +52,7 @@ class TraditionalTests extends GebSpec {
         at(LoginPage)
 
         and:
-        loginPage.alerts.collect { it.text() } == [ expectedErrorMessage ]
+        loginPage.alert.text() == expectedErrorMessage
 
         where:
         username     | password     || expectedErrorMessage

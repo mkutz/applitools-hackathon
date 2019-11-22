@@ -64,7 +64,7 @@ class VisualAITests extends GebSpec {
         loginPage.login(username, password)
 
         then:
-        eyes.checkWindow()
+        eyes.checkElement(loginPage.alert.singleElement())
         eyes.close()
 
         where:
