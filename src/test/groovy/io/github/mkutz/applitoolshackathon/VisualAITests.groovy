@@ -42,7 +42,7 @@ class VisualAITests extends GebSpec {
 
     def "basic UI elements displayed"() {
         given:
-        browser.to(LoginPage)
+        to(LoginPage)
 
         expect:
         eyes.checkWindow("login form")
@@ -58,7 +58,7 @@ class VisualAITests extends GebSpec {
     @Unroll
     def "login with username \"#username\" & password \"#password\" fails"(String username, String password) {
         given:
-        LoginPage loginPage = browser.to(LoginPage)
+        LoginPage loginPage = to(LoginPage)
 
         when:
         loginPage.login(username, password)
@@ -76,7 +76,7 @@ class VisualAITests extends GebSpec {
 
     def "login with username & password succeeds"() {
         given:
-        LoginPage loginPage = browser.to(LoginPage)
+        LoginPage loginPage = to(LoginPage)
 
         when:
         loginPage.login(someUsername, somePassword)
