@@ -15,6 +15,7 @@ class LoginPage extends Page {
         alerts { $('.alert').findAll { it.text().trim() } }
     }
 
+    @SuppressWarnings("GrMethodMayBeStatic")
     void login(String username, String password) {
         usernameInput = username
         passwordInput = password
