@@ -32,6 +32,11 @@ class TraditionalTests extends GebSpec {
             usernameInput.enabled
             passwordInput.enabled
             submitButton.displayed
+            usernameLabel.displayed
+            passwordLabel.displayed
+            twitterIcon.displayed
+            facebookIcon.displayed
+            linkedInIcon.displayed
         }
     }
 
