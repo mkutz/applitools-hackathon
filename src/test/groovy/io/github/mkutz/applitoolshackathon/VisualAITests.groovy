@@ -1,5 +1,6 @@
 package io.github.mkutz.applitoolshackathon
 
+import com.applitools.eyes.BatchInfo
 import com.applitools.eyes.selenium.Eyes
 import geb.spock.GebSpec
 import org.openqa.selenium.Dimension
@@ -14,7 +15,11 @@ class VisualAITests extends GebSpec {
     static final String somePassword = "p4ssw0rd"
 
     static final Eyes eyes = new Eyes().tap {
-        apiKey = System.getProperty("applitools.apikey")
+        apiKey = System.getenv("APPLITOOLS_API_KEY")
+        batch = new BatchInfo("Hackathon")
+        if (System.getenv("APPLITOOLS_BATCH_ID")) {
+            batch.id = System.getenv("APPLITOOLS_BATCH_ID")
+        }
     }
 
     String testName

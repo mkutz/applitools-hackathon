@@ -13,6 +13,7 @@ test {
         systemProperty "geb.env", project.hasProperty("testcontainers") ? "chromeTestcontainers" : ""
         systemProperty "geb.build.baseUrl", "https://demo.applitools.com/hackathon${project.hasProperty("v2") ? "V2": ""}.html"
         systemProperty "applitools.apikey", System.getenv("APPLITOOLS_API_KEY")
+        systemProperty "applitools.batchid", System.getenv("APPLITOOLS_BATCH_ID")
     }
 }
 
