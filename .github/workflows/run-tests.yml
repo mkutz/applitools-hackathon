@@ -14,4 +14,4 @@ jobs:
       env:
         APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
       run:
-        ./gradlew test -Ptestcontainers
+        ./gradlew test -Ptestcontainers -Pv2
