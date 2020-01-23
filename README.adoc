@@ -3,7 +3,7 @@
 
 == Used Technology
 
-This application uses https://gebish.org[Geb] as Selenium framework and http://spockframework.org[Spock] as test framework combined with https://retest.de/recheck-web-open-source/[Recheck Web] for visual testing.
+This application uses https://gebish.org[Geb] as Selenium framework and http://spockframework.org[Spock] as test framework.
 
 == How To Run
 
